@@ -1,0 +1,57 @@
+{
+	"name": "OUTPUT_REPORTE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dfbdastorage2012",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "output/reporte",
+				"container": "dfbdablobstorage2012"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE",
+				"type": "String"
+			},
+			{
+				"name": "TELEFONO",
+				"type": "String"
+			},
+			{
+				"name": "CORREO",
+				"type": "String"
+			},
+			{
+				"name": "FECHA_INGRESO",
+				"type": "String"
+			},
+			{
+				"name": "EDAD",
+				"type": "Int32"
+			},
+			{
+				"name": "SALARIO",
+				"type": "Double"
+			},
+			{
+				"name": "ID_EMPRESA",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

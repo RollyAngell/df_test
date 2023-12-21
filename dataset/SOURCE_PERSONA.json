@@ -1,0 +1,57 @@
+{
+	"name": "SOURCE_PERSONA",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dfbdafilestorage2012",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "persona.data",
+				"folderPath": "source/persona"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE",
+				"type": "String"
+			},
+			{
+				"name": "TELEFONO",
+				"type": "String"
+			},
+			{
+				"name": "CORREO",
+				"type": "String"
+			},
+			{
+				"name": "FECHA_INGRESO",
+				"type": "String"
+			},
+			{
+				"name": "EDAD",
+				"type": "Int32"
+			},
+			{
+				"name": "SALARIO",
+				"type": "Double"
+			},
+			{
+				"name": "ID_EMPRESA",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
